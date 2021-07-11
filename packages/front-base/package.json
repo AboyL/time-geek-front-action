@@ -1,0 +1,29 @@
+{
+    "name": "front-base",
+    "version": "0.0.0",
+    "description": "> TODO: description",
+    "author": "lijunfeng <junfeng.li@hand-china.com>",
+    "homepage": "https://github.com/AboyL/time-geek-front-action#readme",
+    "license": "ISC",
+    "main": "lib/front-base.js",
+    "directories": {
+        "lib": "lib",
+        "test": "npx jest"
+    },
+    "files": [
+        "lib"
+    ],
+    "publishConfig": {
+        "registry": "http://nexus.saas.hand-china.com/content/groups/hzero-npm-group/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AboyL/time-geek-front-action.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: run tests from root\" && exit 1"
+    },
+    "bugs": {
+        "url": "https://github.com/AboyL/time-geek-front-action/issues"
+    }
+}

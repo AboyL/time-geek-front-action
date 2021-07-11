@@ -1,0 +1,13 @@
+{
+  "name": "time-geek-front-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AboyL/time-geek-front-action.git",
+  "author": "lijunfeng <junfeng.li@hand-china.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "jest": "^27.0.6",
+    "lerna": "^4.0.0"
+  }
+}
