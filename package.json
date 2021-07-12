@@ -1,13 +1,31 @@
 {
-  "name": "time-geek-front-action",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/AboyL/time-geek-front-action.git",
-  "author": "lijunfeng <junfeng.li@hand-china.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/jest": "^26.0.24",
-    "jest": "^27.0.6",
-    "lerna": "^4.0.0"
-  }
+    "name": "time-geek-front-action",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/AboyL/time-geek-front-action.git",
+    "author": "lijunfeng <junfeng.li@hand-china.com>",
+    "license": "MIT",
+    "dependencies": {
+        "@ant-design/pro-layout": "^6.5.0",
+        "@types/mockjs": "^1.0.4",
+        "@umijs/plugin-antd": "^0.10.0",
+        "axios": "^0.21.1",
+        "mockjs": "^1.1.0",
+        "react": "17.x",
+        "react-dom": "17.x",
+        "umi": "^3.5.5"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.24",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "@umijs/preset-react": "1.x",
+        "@umijs/test": "^3.5.5",
+        "jest": "^27.0.6",
+        "lerna": "^4.0.0",
+        "lint-staged": "^10.0.7",
+        "prettier": "^2.2.0",
+        "typescript": "^4.1.2",
+        "yorkie": "^2.0.0"
+    }
 }

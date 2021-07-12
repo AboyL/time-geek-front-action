@@ -21,7 +21,7 @@
         "url": "git+https://github.com/AboyL/time-geek-front-action.git"
     },
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1"
+        "dev": "umi dev"
     },
     "bugs": {
         "url": "https://github.com/AboyL/time-geek-front-action/issues"
