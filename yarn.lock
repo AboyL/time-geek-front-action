@@ -7678,6 +7678,11 @@ moment@^2.24.0, moment@^2.25.3, moment@^2.27.0, moment@^2.29.1:
   resolved "http://nexus.saas.hand-china.com/repository/hzero-npm-group/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
   integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
 
+monaco-editor@^0.25.2:
+  version "0.25.2"
+  resolved "http://nexus.saas.hand-china.com/repository/hzero-npm-group/monaco-editor/-/monaco-editor-0.25.2.tgz#119e2b15bbd968a1a99c03cac9c329316d7c37e9"
+  integrity sha1-EZ4rFbvZaKGpnAPKycMpMW18N+k=
+
 ms@2.0.0:
   version "2.0.0"
   resolved "http://nexus.saas.hand-china.com/repository/hzero-npm-group/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"

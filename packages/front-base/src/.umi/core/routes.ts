@@ -7,6 +7,16 @@ import { plugin } from './plugin';
 export function getRoutes() {
   const routes = [
   {
+    "path": "/",
+    "exact": true,
+    "component": require('@/pages/index.tsx').default
+  },
+  {
+    "path": "/monaco-editor",
+    "exact": true,
+    "component": require('@/pages/monaco-editor/index.tsx').default
+  },
+  {
     "path": "/read-image",
     "exact": true,
     "component": require('@/pages/read-image/index.tsx').default

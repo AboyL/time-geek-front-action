@@ -41,6 +41,11 @@ __tests__/hexadecimalConversion.test.js
 
 整体上来还是需要借助canvas来实现
 
-1. yarn dev
-2. 进入 /read-image
-3. 选择读取保存文件
+  1. yarn dev
+  2. 进入 /read-image
+  3. 选择读取保存文件
+
+3. 通过monaco-editor编辑本地文件并且保存
+
+monaco-editor文件夹
+

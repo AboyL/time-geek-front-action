@@ -11,6 +11,7 @@
         "@umijs/plugin-antd": "^0.10.0",
         "axios": "^0.21.1",
         "mockjs": "^1.1.0",
+        "monaco-editor": "^0.25.2",
         "react": "17.x",
         "react-dom": "17.x",
         "umi": "^3.5.5"

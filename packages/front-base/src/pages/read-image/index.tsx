@@ -2,34 +2,9 @@
 // 2. 修改图片
 // 3. 保存图片
 import { Button } from "antd"
+import { writeFile, ImagePickerOpts } from '../utils'
 
-const TextPickerOpts = {
-  types: [
-    {
-      description: 'Text',
-      accept: {
-        'text/plain': ['.txt', '.text'],
-      }
-    },
-  ],
-  excludeAcceptAllOption: true,
-  multiple: false
-};
-
-const ImagePickerOpts = {
-  types: [
-    {
-      description: 'Images',
-      accept: {
-        'image/*': ['.png', '.gif', '.jpeg', '.jpg'],
-      }
-    },
-  ],
-  excludeAcceptAllOption: true,
-  multiple: false
-};
 const pickerOptsMap = {
-  text: TextPickerOpts,
   image: ImagePickerOpts
 }
 
@@ -102,18 +77,9 @@ export default () => {
     return handle;
   }
 
-  async function writeFile(fileHandle, contents) {
-    // Create a FileSystemWritableFileStream to write to.
-    const writable = await fileHandle.createWritable();
-    // Write the contents of the file to the stream.
-    await writable.write(contents);
-    // Close the file and write the contents to disk.
-    await writable.close();
-  }
-
   return (
     <div>
-      <Button type="primary" onClick={pickerImage} >test</Button>
+      <Button type="primary" onClick={pickerImage} >选择图片并且进行灰度转换</Button>
     </div>
   )
 }
