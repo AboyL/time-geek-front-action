@@ -1,13 +1,12 @@
 问题与练习
 
-1. 为什么0.1+02!==0.3
-
+1. 为什么0.1+0.2!==0.3
 2. toFixed 与 toPrices的区别
-
 toFixed 是取小数点后的两位
+[文章地址](https://www.yuque.com/aboyl/hvp1oc/avh6eh)
 
 3. 编写一个函数返回传入的值的类型
-> type.test.js
+packages/front-base/__tests__/type.test.js
 
 4. 如何实现图片的粘贴
 

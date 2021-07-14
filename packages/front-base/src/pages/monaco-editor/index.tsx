@@ -12,7 +12,6 @@ export default () => {
 
   const pickerFile = async () => {
     const [fileHandle] = await (window as any).showOpenFilePicker(TextPickerOpts);
-    console.log('fileHandle', fileHandle);
     if (!fileHandle) {
       return
     }
