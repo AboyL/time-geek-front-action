@@ -2,7 +2,7 @@
 // 2. 修改图片
 // 3. 保存图片
 import { Button } from "antd"
-import { writeFile, ImagePickerOpts } from '../utils'
+import { writeFile, ImagePickerOpts } from '../../utils'
 
 const pickerOptsMap = {
   image: ImagePickerOpts

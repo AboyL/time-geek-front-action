@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react'
 import * as monaco from 'monaco-editor';
 import { Button } from "antd"
 import styles from './style.less';
-import { writeFile, TextPickerOpts } from '../utils'
+import { writeFile, TextPickerOpts } from '../../utils'
 
 export default () => {
   const editorRef = useRef<HTMLDivElement>(null)

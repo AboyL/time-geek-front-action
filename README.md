@@ -1,1 +1,2 @@
-# time-geek-front-action
+作业位于packages目录下。
+每周作业在对应的weak里面。
