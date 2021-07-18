@@ -25,6 +25,7 @@
         "@umijs/preset-react": "1.x",
         "@umijs/test": "^3.5.5",
         "jest": "^27.0.6",
+        "jest-runner-vscode": "^1.2.1",
         "lerna": "^4.0.0",
         "lint-staged": "^10.0.7",
         "prettier": "^2.2.0",
