@@ -7,6 +7,8 @@ packages/week2/__tests__/list.test.js
 > yarn dev
 启动项目查看
 
+文章记录:https://www.yuque.com/aboyl/hvp1oc/nlyaur
+
 相对老师那个版本
 1. 增加v-if功能
 2. 修复了循环项不在list中的问题
