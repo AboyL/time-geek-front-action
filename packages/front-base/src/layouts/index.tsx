@@ -17,8 +17,8 @@ export default function Layout({ children, location, route, history, match }: IR
     <div>
       <UedCenter theme={theme} >
         {/* <div onClick={chooseColor} className={styles['theme-container']} >主题</div> */}
-        <div className="title" >title</div>
-        <div onClick={chooseColor} className={'theme-container'} >主题</div>
+        {/* <div className="title" >title</div> */}
+        {/* <div onClick={chooseColor} className={'theme-container'} >主题</div> */}
         {children}
       </UedCenter>
     </div>

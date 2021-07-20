@@ -24,6 +24,11 @@ export function getRoutes() {
         "path": "/read-image",
         "exact": true,
         "component": require('@/pages/read-image/index.tsx').default
+      },
+      {
+        "path": "/template",
+        "exact": true,
+        "component": require('@/pages/template/index.jsx').default
       }
     ]
   }

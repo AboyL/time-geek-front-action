@@ -11,6 +11,7 @@
         "@umijs/plugin-antd": "^0.10.0",
         "axios": "^0.21.1",
         "less": "^4.1.1",
+        "lodash": "^4.17.21",
         "mockjs": "^1.1.0",
         "monaco-editor": "^0.25.2",
         "react": "17.x",
