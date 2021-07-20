@@ -6,7 +6,8 @@ export default {
             <div class="news-item" v-for="item in newslist">
                 <div class="img" v-if="item.info.showImage" ><img src="{{item.image}}"/></div>
                 <div class="date" v-if="item.info.showDate">{{item.time}}</div>
-                <div class="img">{{item.info.name}}</div>
+                <div class="name">{{item.info.name}}</div>
+                <div class="title">{{item.title}}</div>
             </div>
         </div>
     `;

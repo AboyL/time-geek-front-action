@@ -1,5 +1,5 @@
 import Vnode from "./vnode.js";
-import {get} from 'lodash'
+import { get } from 'lodash'
 export default class Engine {
   constructor() {
     this.nodes = new Map();
@@ -39,7 +39,7 @@ export default class Engine {
     const _this = this
     //转成成node节点
     while (stack.length > 0) {
-      let pnode = stack.pop();
+      let pnode = stack.shift();
       let nodestr = pnode.childrenTemplate.trim();
       re.lastIndex = 0;
       [...nodestr.matchAll(re)].forEach((item) => {
@@ -64,8 +64,9 @@ export default class Engine {
       'v-if': (stack, pnode, pdom, scope) => {
         // 如果得到为true那么就可以去掉
         let key = pnode.attr.get("v-if")
-        const value=get(scope,key)
-        if(value){
+        console.log('key', scope, key, get(scope, key));
+        const value = get(scope, key)
+        if (value) {
           pnode.attr.delete("v-if")
           // 可以进行下一步渲染
           let newnode = new Vnode(
@@ -75,7 +76,8 @@ export default class Engine {
             pnode.parent,
             pnode.childrenTemplate
           );
-          stack.push([newnode, pdom, scope]);
+          console.log('scope', scope);
+          stack.unshift([newnode, pdom, scope]);
         }
       },
       'v-for': (stack, pnode, pdom, scope) => {
@@ -109,6 +111,7 @@ export default class Engine {
           // newnode.children.forEach((item) => {
           //   stack.push([item, ele, newScope]);
           // });
+          console.log('newScope',newScope);
           stack.push([newnode, pdom, newScope]);
         }
       }
@@ -130,7 +133,6 @@ export default class Engine {
           this.specialDealWith()['v-if'](stack, pnode, pdom, scope)
           continue
         }
-
         if (pnode.attr.get('v-for')) {
           this.specialDealWith()['v-for'](stack, pnode, pdom, scope)
         }

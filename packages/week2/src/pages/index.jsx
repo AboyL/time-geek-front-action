@@ -12,6 +12,7 @@ export default () => {
   useEffect(() => {
     const v1 = new Engine().mounted(rootRef.current);
     if (list.length) {
+      console.log('list',list);
       v1.render(NewsList, { newslist: list, show: show });
     }
     return () => {
