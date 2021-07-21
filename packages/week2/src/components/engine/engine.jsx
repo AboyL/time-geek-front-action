@@ -1,5 +1,5 @@
 import Vnode from "./vnode.js";
-import { get } from 'lodash'
+import { get, cloneDeep } from 'lodash'
 export default class Engine {
   constructor() {
     this.nodes = new Map();
@@ -61,23 +61,31 @@ export default class Engine {
 
   specialDealWith () {
     return {
-      'v-if': (stack, pnode, pdom, scope) => {
+      'v-if': (stack, pnode, pdom, data, scope) => {
         // 如果得到为true那么就可以去掉
         let key = pnode.attr.get("v-if")
         console.log('key', scope, key, get(scope, key));
         const value = get(scope, key)
         if (value) {
-          pnode.attr.delete("v-if")
+          // pnode.attr.delete("v-if")
           // 可以进行下一步渲染
           let newnode = new Vnode(
-            pnode.tag,
-            pnode.attr,
-            pnode.children,
-            pnode.parent,
-            pnode.childrenTemplate
+            cloneDeep(pnode.tag),
+            cloneDeep(pnode.attr),
+            cloneDeep(pnode.children),
+            cloneDeep(pnode.parent),
+            cloneDeep(pnode.childrenTemplate)
           );
-          console.log('scope', scope);
+          newnode.attr.delete("v-if")
+
           stack.unshift([newnode, pdom, scope]);
+          // let html = this.scopehtmlParse(newnode, data, scope);
+          // let ele = this.createElement(newnode, html);
+          // this.scopeAtrrParse(ele, newnode, data, scope);
+          // pdom.appendChild(ele);
+          // newnode.children.forEach((item) => {
+          //   stack.push([item, ele, scope]);
+          // });
         }
       },
       'v-for': (stack, pnode, pdom, scope) => {
@@ -89,9 +97,6 @@ export default class Engine {
         for (let i = 0; i < scope[prop].length; i++) {
           // 排除两个特殊属性
           pnode.attr.delete('v-for')
-          if (pnode.attr.get('v-if')) {
-            pnode.attr.delete('v-if')
-          }
           // 生成新的node
           let newnode = new Vnode(
             pnode.tag,
@@ -111,7 +116,6 @@ export default class Engine {
           // newnode.children.forEach((item) => {
           //   stack.push([item, ele, newScope]);
           // });
-          console.log('newScope',newScope);
           stack.push([newnode, pdom, newScope]);
         }
       }
@@ -129,8 +133,7 @@ export default class Engine {
         // 先判断v-if 假如没有v-if都可以不处理了
         // 处理v-for
         if (pnode.attr.get('v-if')) {
-          // 如果返回了false 直接跳过
-          this.specialDealWith()['v-if'](stack, pnode, pdom, scope)
+          this.specialDealWith()['v-if'](stack, pnode, pdom, data, scope)
           continue
         }
         if (pnode.attr.get('v-for')) {
