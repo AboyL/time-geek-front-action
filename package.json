@@ -7,17 +7,27 @@
     "license": "MIT",
     "dependencies": {
         "@ant-design/pro-layout": "^6.5.0",
+        "@babel/core": "^7.14.8",
+        "@babel/preset-env": "^7.14.8",
+        "@babel/preset-react": "^7.14.5",
         "@types/mockjs": "^1.0.4",
         "@umijs/plugin-antd": "^0.10.0",
         "axios": "^0.21.1",
+        "babel-loader": "^8.2.2",
+        "express": "^4.17.1",
+        "fs-extra": "^10.0.0",
         "less": "^4.1.1",
         "lodash": "^4.17.21",
         "mockjs": "^1.1.0",
         "monaco-editor": "^0.25.2",
+        "monaco-editor-webpack-plugin": "^4.1.1",
         "react": "17.x",
         "react-dom": "17.x",
+        "react-monaco-editor": "^0.44.0",
         "styled-components": "^5.3.0",
-        "umi": "^3.5.5"
+        "umi": "^3.5.5",
+        "webpack": "^5.46.0",
+        "webpack-cli": "^4.7.2"
     },
     "devDependencies": {
         "@types/jest": "^26.0.24",
