@@ -13,9 +13,6 @@
     "files": [
         "lib"
     ],
-    "publishConfig": {
-        "registry": "http://nexus.saas.hand-china.com/content/groups/hzero-npm-group/"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/AboyL/time-geek-front-action.git"
