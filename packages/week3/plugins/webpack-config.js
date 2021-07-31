@@ -6,7 +6,7 @@ module.exports = {
     output: {
         filename: '[hash].js',
         umdNamedDefine: true,
-        library: "component",
+        library: "testComponent",
         libraryTarget: "umd",
         // clean: true,
     },

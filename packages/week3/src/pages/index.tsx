@@ -41,9 +41,10 @@ export default () => {
       document.body.appendChild(script)
       script.onload = () => {
         console.log(
-          (window as any).component
+          (window as any).testComponent
         );
-        const newComponent = (window as any).component
+        const newComponent = (window as any).testComponent
+        console.log('newComponent',newComponent);
         setComponent(() => newComponent.default)
       }
     })

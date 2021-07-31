@@ -1,9 +1,10 @@
 import MonacoWebpackPlugin from 'monaco-editor-webpack-plugin';
+const { winPath } = require('@umijs/utils')
 
 export default {
   // webpack5:{},
   plugins: [
-    './plugins/index.js'
+    winPath(require.resolve('./plugins/index.js'))
   ],
   chainWebpack: (memo) => {
     console.log('xxxx');
