@@ -1015,7 +1015,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.4.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.14.8"
   resolved "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.14.8.tgz?cache=0&sync_timestamp=1626806459168&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.14.8.tgz#7119a56f421018852694290b9f9148097391b446"
   integrity sha1-cRmlb0IQGIUmlCkLn5FICXORtEY=
@@ -3139,6 +3139,17 @@
   dependencies:
     fast-deep-equal "3.1.1"
 
+"@umijs/plugin-qiankun@^2.27.0":
+  version "2.27.0"
+  resolved "https://registry.nlark.com/@umijs/plugin-qiankun/download/@umijs/plugin-qiankun-2.27.0.tgz?cache=0&sync_timestamp=1626857888835&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40umijs%2Fplugin-qiankun%2Fdownload%2F%40umijs%2Fplugin-qiankun-2.27.0.tgz#15da23254816210b36ae9da2b7e99dbd7926bcc5"
+  integrity sha1-FdojJUgWIQs2rp2it+mdvXkmvMU=
+  dependencies:
+    "@babel/runtime" "^7.4.5"
+    address "^1.1.2"
+    lodash "^4.17.15"
+    path-to-regexp "^1.7.0"
+    qiankun "^2.2.1"
+
 "@umijs/plugin-request@2.7.0":
   version "2.7.0"
   resolved "https://registry.nlark.com/@umijs/plugin-request/download/@umijs/plugin-request-2.7.0.tgz?cache=0&sync_timestamp=1626860835623&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40umijs%2Fplugin-request%2Fdownload%2F%40umijs%2Fplugin-request-2.7.0.tgz#a2a8b4760b836b7d875dd661c97416b45f69c39d"
@@ -3521,6 +3532,11 @@ add-stream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/add-stream/download/add-stream-1.0.0.tgz#6a7990437ca736d5e1288db92bd3266d5f5cb2aa"
   integrity sha1-anmQQ3ynNtXhKI25K9MmbV9csqo=
+
+address@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.npm.taobao.org/address/download/address-1.1.2.tgz#bf1116c9c758c51b7a933d296b72c221ed9428b6"
+  integrity sha1-vxEWycdYxRt6kz0pa3LCIe2UKLY=
 
 agent-base@6, agent-base@^6.0.2:
   version "6.0.2"
@@ -6855,6 +6871,13 @@ import-from@^2.1.0:
   integrity sha1-M1238qev/VOqpHHUuAId7ja387E=
   dependencies:
     resolve-from "^3.0.0"
+
+import-html-entry@^1.9.0:
+  version "1.11.1"
+  resolved "https://registry.npm.taobao.org/import-html-entry/download/import-html-entry-1.11.1.tgz?cache=0&sync_timestamp=1611063611935&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fimport-html-entry%2Fdownload%2Fimport-html-entry-1.11.1.tgz#3d8c5977926bdd122ab8e658965c102068b4af8d"
+  integrity sha1-PYxZd5Jr3RIquOZYllwQIGi0r40=
+  dependencies:
+    "@babel/runtime" "^7.7.2"
 
 import-local@^3.0.2:
   version "3.0.2"
@@ -10963,6 +10986,17 @@ q@^1.5.1:
   resolved "https://registry.npm.taobao.org/q/download/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
+qiankun@^2.2.1:
+  version "2.4.5"
+  resolved "https://registry.nlark.com/qiankun/download/qiankun-2.4.5.tgz#7dab983fa1a3c80184e29d6d43771f2992293b0a"
+  integrity sha1-fauYP6GjyAGE4p1tQ3cfKZIpOwo=
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    import-html-entry "^1.9.0"
+    lodash "^4.17.11"
+    single-spa "^5.9.2"
+    tslib "^1.10.0"
+
 qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.npm.taobao.org/qs/download/qs-6.7.0.tgz?cache=0&sync_timestamp=1616385511119&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
@@ -12532,6 +12566,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
   version "3.0.3"
   resolved "https://registry.npm.taobao.org/signal-exit/download/signal-exit-3.0.3.tgz?cache=0&sync_timestamp=1608181330273&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsignal-exit%2Fdownload%2Fsignal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha1-oUEMLt2PB3sItOJTyOrPyvBXRhw=
+
+single-spa@^5.9.2:
+  version "5.9.3"
+  resolved "https://registry.nlark.com/single-spa/download/single-spa-5.9.3.tgz#2d151cbb3b273629a5b27b30a3b8ca847dcba4c5"
+  integrity sha1-LRUcuzsnNimlsnswo7jKhH3LpMU=
 
 sisteransi@^1.0.5:
   version "1.0.5"
