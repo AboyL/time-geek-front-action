@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  main-module:
+    image: "main-module"
+    container_name: "main-module"
+    restart: "always"
+    ports:
+      - "8000:80"
+
+  sub-module:
+    image: "sub-module"
+    container_name: "sub-module"
+    restart: "always"
+    ports:
+      - "7001:80"

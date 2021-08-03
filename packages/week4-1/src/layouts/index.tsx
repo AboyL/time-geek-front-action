@@ -1,14 +1,31 @@
 import { useEffect, useState } from 'react'
 import { IRouteComponentProps, useModel } from 'umi'
 import styles from './index.less'
+
+const getList = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const list = []
+      for (let i = 0; i < 10; i++) {
+        list.push({
+          title: `title${i}`,
+          content: `content${i}`,
+        })
+      }
+      resolve(list)
+    }, 100);
+  })
+}
 export default function Layout({ children, location, route, history, match }: IRouteComponentProps) {
   const [list, setList] = useState([])
   // const { content, setContent } = useModel('content', model => model);
   const { content, setContent } = useModel('@@qiankunStateForSlave');
 
   useEffect(() => {
-    fetch('/list').then((response) => response.json())
-      .then(res => {
+    // fetch('/list')
+    getList()
+      // .then((response) => response.json())
+      .then((res: any) => {
         if (res) {
           setList(res)
           setContent(res && res[0]?.content)

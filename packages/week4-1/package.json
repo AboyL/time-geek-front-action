@@ -25,7 +25,8 @@
         "@umijs/plugin-qiankun": "^2.27.0"
     },
     "scripts": {
-        "dev": "umi dev"
+        "dev": "umi dev",
+        "build": "umi build"
     },
     "bugs": {
         "url": "https://github.com/AboyL/time-geek-front-action/issues"
