@@ -1,0 +1,33 @@
+version: "2"
+
+services:
+
+  mysql:
+    image: "mysql:8.0.26"
+    container_name: "week7-mysql"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: "always"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=test"
+      - "MYSQL_DATABASE=test"
+      - "TZ=Asia/Shanghai"
+    ports:
+      - "3333:3306"
+    expose:
+      - "3306"
+  redis:
+    image: "redis:alpine3.14"
+    container_name: "week7-redis"
+
+  server:
+    build: .
+    container_name: "week7-server"
+    restart: "always"
+    depends_on:
+      - "mysql"
+      - "redis"
+    volumes:
+      - ".:/App"
+    ports:
+      - "3000:3000"
+
